@@ -7,9 +7,9 @@ A Streamlit dashboard that predicts which customers are likely to leave, explain
 ## Screenshots
 
 
-![Dashboard](dashboard .jpg)
+![Dashboard](Dashboard.jpg)
 
-![Dataset](Dataset .jpg)
+![Dataset](Dataset.jpg)
 
 ![Churn prediction](Churn prediction.jpg)
 
