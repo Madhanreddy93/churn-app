@@ -1,30 +1,35 @@
-# Keepwise: Customer Churn Prediction & Retention Intelligence
+# Customer Churn Prediction and Retention Intelligence System
 
-Streamlit dashboard that predicts which customers will churn, explains why, and suggests retention actions.
+A Streamlit dashboard that predicts which customers are likely to leave, explains why, and suggests actions to keep them.
 
-## Run
-```
+**Live demo:** https://churn-app-yc8bywkvfr7atzxn3z2ckw.streamlit.app/
+
+## Problem
+Companies often notice churn only after revenue is lost. This project finds at-risk customers early and turns predictions into retention actions.
+
+## Features
+- Dataset upload (CSV) or built-in sample data
+- Churn prediction with Logistic Regression, Random Forest or Gradient Boosting
+- Model evaluation: accuracy, precision, recall, F1, ROC-AUC, confusion matrix, ROC curve
+- Risk analysis: High, Medium and Low risk tiers, revenue at risk, churn drivers, segment charts
+- Retention suggestions for each at-risk customer, downloadable as CSV
+
+## Tech stack
+Python, pandas, scikit-learn, Plotly, Streamlit
+
+## How it works
+CSV upload -> data cleaning -> preprocessing -> ML model -> churn probability -> risk tier -> retention actions
+
+## Project files
+- app.py: dashboard pages
+- ml.py: data cleaning, training and metrics
+- retention.py: retention rules
+- generate_sample_data.py: creates sample data
+- requirements.txt: Python packages
+
+## Run locally
 pip install -r requirements.txt
-python generate_sample_data.py     # creates data/sample_churn.csv
 streamlit run app.py
-```
 
-## Structure
-| File | Purpose |
-|---|---|
-| app.py | Streamlit UI with 4 pages |
-| ml.py | Cleaning, pipeline, training, metrics, feature importance |
-| retention.py | Rule-based retention actions |
-| generate_sample_data.py | Synthetic Telco-style dataset |
-
-## Pages
-1. **Upload data**: CSV upload (or sample), pick churn column, ID column and model.
-2. **Churn prediction**: accuracy, precision, recall, F1, ROC-AUC, confusion matrix, ROC curve, single-customer predictor, scored CSV download.
-3. **Risk analysis**: risk tiers, revenue at risk, churn drivers, segment and distribution charts.
-4. **Retention suggestions**: per-customer reasons and actions, downloadable action list.
-
-## Pipeline
-CSV -> clean -> impute/scale/one-hot -> Logistic Regression | Random Forest | Gradient Boosting -> probability -> risk tier -> retention rules.
-
-## Ideas to extend
-SMOTE for imbalance, SHAP explanations, hyperparameter tuning, saving models with joblib, login and a database.
+## Author
+RANGAREDDY GARI MADHAN 
