@@ -4,6 +4,17 @@ A Streamlit dashboard that predicts which customers are likely to leave, explain
 
 **Live demo:** https://churn-app-yc8bywkvfr7atzxn3z2ckw.streamlit.app/
 
+## Screenshots
+
+
+![Dashboard](dashboard .jpg)
+
+![Dataset](Dataset .jpg)
+
+![Churn prediction](Churn prediction.jpg)
+
+![Risk analysis](Risk analysis.jpg)
+
 ## Problem
 Companies often notice churn only after revenue is lost. This project finds at-risk customers early and turns predictions into retention actions.
 
